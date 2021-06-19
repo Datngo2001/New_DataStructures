@@ -1,0 +1,85 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DataStructures"
+        xmlns:View="clr-namespace:DataStructures.View" x:Class="DataStructures.MainWindow"
+        mc:Ignorable="d"
+        Title="Structure Data [C#]" Height="450" Width="600" FontFamily="Century Gothic">
+    <StackPanel x:Name="mainPanel">
+
+        <Expander Header="List" VerticalContentAlignment="Top">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="35" />
+                    <RowDefinition />
+                    <RowDefinition Height="60" />
+                </Grid.RowDefinitions>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Margin="5" Text="Item" VerticalAlignment="Center"/>
+                    <TextBox x:Name="ItemList" Margin="5" Width="200" />
+                    <Button x:Name="btnInsert" Content="Insert" Width="75" Margin="5" Click="btnInsert_Click" />
+                    <Button x:Name="btnRemove" Content="Remove" Width="75" Margin="5" Click="btnRemove_Click" />
+                    <Button x:Name="btnSearch" Content="Search" Width="75" Margin="5,0,5,4.667" Click="btnSearch_Click" Height="25" VerticalAlignment="Bottom" />
+                    <Button x:Name="btnClear" Content="Clear" Width="75" Margin="5" Click="btnClear_Click" />
+                </StackPanel>
+                <Canvas x:Name="canvas1" Grid.Row="2" Margin="5" Height="50" Background="#EEEEEE"/>
+            </Grid>
+        </Expander>
+        <Expander Header="Stack" VerticalContentAlignment="Top" Margin="0,0,-0.4,0">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="35" />
+                    <RowDefinition />
+                    <RowDefinition Height="260" />
+                </Grid.RowDefinitions>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Margin="5" Text="Item" VerticalAlignment="Center"/>
+                    <TextBox x:Name="ItemStack" Margin="5" Width="200" />
+                    <Button x:Name="btnPush" Content="Push" Width="75" Margin="5" Click="btnPush_Click" />
+                    <Button x:Name="btnPop" Content="Pop" Width="75" Margin="5" Click="btnPop_Click" />
+                    <Button x:Name="btnPeek" Content="Peek" Width="75" Margin="5" Click="btnPeek_Click" />
+                    <Button x:Name="btnClearStack" Content="Clear" Width="75" Margin="5" Click="btnClearStack_Click" />
+                </StackPanel>
+                <Canvas x:Name="canvas2" Grid.Row="2" Margin="5" Height="250" Background="#EEEEEE"/>
+            </Grid>
+        </Expander>
+        <Expander Header="Queue" VerticalContentAlignment="Top">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="35" />
+                    <RowDefinition />
+                    <RowDefinition Height="60" />
+                </Grid.RowDefinitions>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Margin="5" Text="Item" VerticalAlignment="Center"/>
+                    <TextBox x:Name="ItemQueue" Margin="5" Width="200" />
+                    <Button x:Name="btnEnqueue" Content="Enqueue" Width="75" Margin="5" Click="btnEnqueue_Click" />
+                    <Button x:Name="btnDequeue" Content="Dequeue" Width="75" Margin="5" Click="btnDequeue_Click" />
+                    <Button x:Name="btnClearQueue" Content="Clear" Width="75" Margin="5" Click="btnClearQueue_Click" />
+                </StackPanel>
+                <Canvas x:Name="canvas3" Grid.Row="2" Margin="5" Height="50" Background="#EEEEEE"/>
+            </Grid>
+        </Expander>
+        <Expander Header="Tree" VerticalContentAlignment="Top">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="35" />
+                    <RowDefinition />
+                    <RowDefinition Height="300" />
+                </Grid.RowDefinitions>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Margin="5" Text="Item" VerticalAlignment="Center"/>
+                    <TextBox x:Name="ItemTree" Margin="5" Width="200" />
+                    <Button x:Name="btnAdd" Content="Add" Width="75" Margin="5" Click="btnAdd_Click" />
+                    <Button x:Name="btnRemoveItemTree" Content="Remove" Width="75" Margin="5,0,5,4.667" Click="btnRemoveTreeItem_Click" Height="25" VerticalAlignment="Bottom" />
+                    <Button x:Name="btnSearchItemTree" Content="Search" Width="75" Margin="5" Click="btnSearchTreeItem_Click" />
+                    <Button x:Name="btnClearTree" Content="Clear" Width="75" Margin="5" Click="btnClearTree_Click" />
+                </StackPanel>
+                <Canvas x:Name="canvas4" Grid.Row="2" Margin="5" Height="300" Background="#EEEEEE"/>
+            </Grid>
+        </Expander>
+        <View:StackElement Height="100" Width="Auto"/>
+    </StackPanel>
+</Window>
